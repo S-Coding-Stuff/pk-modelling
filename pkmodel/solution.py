@@ -2,6 +2,7 @@
 # Solution class
 #
 
+
 class Solution:
     """A Pharmokinetic (PK) model solution
 
@@ -12,6 +13,6 @@ class Solution:
         an example paramter
 
     """
+
     def __init__(self, value=44):
         self.value = value
-
