@@ -1,7 +1,7 @@
 #
 # pkmodel setuptools script
 #
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 
 def get_version():
@@ -16,8 +16,9 @@ def get_version():
     import os
     import sys
 
-    sys.path.append(os.path.abspath('pkmodel'))
+    sys.path.append(os.path.abspath("pkmodel"))
     from version_info import VERSION as version
+
     sys.path.pop()
 
     return version
@@ -27,54 +28,43 @@ def get_readme():
     """
     Load README.md text for use as description.
     """
-    with open('README.md') as f:
+    with open("README.md") as f:
         return f.read()
 
 
 # Go!
 setup(
     # Module name (lowercase)
-    name='pkmodel',
-
+    name="pkmodel",
     # Version
     version=get_version(),
-
-    description='An example Python project.',
-
+    description="An example Python project.",
     long_description=get_readme(),
-
-    license='MIT license',
-
+    license="MIT license",
     # author='',
-
     # author_email='',
-
-    maintainer='Martin Robinson',
-
-    maintainer_email='martin.robinson@cs.ox.ac.uk',
-
-    url='https://github.com/SABS-R3/2020-software-engineering-projects-pk',
-
+    maintainer="Martin Robinson",
+    maintainer_email="martin.robinson@cs.ox.ac.uk",
+    url="https://github.com/SABS-R3/2020-software-engineering-projects-pk",
     # Packages to include
-    packages=find_packages(include=('pkmodel', 'pkmodel.*')),
-
+    packages=find_packages(include=("pkmodel", "pkmodel.*")),
     # List of dependencies
     install_requires=[
         # Dependencies go here!
-        'numpy',
-        'matplotlib',
-        'scipy',
+        "numpy",
+        "matplotlib",
+        "scipy",
     ],
     extras_require={
-        'docs': [
+        "docs": [
             # Sphinx for doc generation. Version 1.7.3 has a bug:
-            'sphinx>=1.5, !=1.7.3',
+            "sphinx>=1.5, !=1.7.3",
             # Nice theme for docs
-            'sphinx_rtd_theme',
+            "sphinx_rtd_theme",
         ],
-        'dev': [
+        "dev": [
             # Flake8 for code style checking
-            'flake8>=3',
+            "flake8>=3",
         ],
     },
 )

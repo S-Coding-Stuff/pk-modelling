@@ -1,7 +1,3 @@
-#
-# Model class
-#
-
 class Model:
     """A Pharmokinetic (PK) model
 
@@ -12,6 +8,6 @@ class Model:
         an example paramter
 
     """
+
     def __init__(self, value=42):
         self.value = value
-
