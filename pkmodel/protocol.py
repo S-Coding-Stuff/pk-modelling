@@ -2,6 +2,7 @@
 # Protocol class
 #
 
+
 class Protocol:
     """A Pharmokinetic (PK) protocol
 
@@ -12,8 +13,10 @@ class Protocol:
         an example paramter
 
     """
+
     def __init__(self, value=43):
         self.value = value
+<<<<<<< HEAD
 
 class IV:
 
@@ -24,3 +27,5 @@ class IV:
     def compartment_eq(self, Qp, qc, vc, qp1, vp1):
 
         
+=======
+>>>>>>> origin/main
